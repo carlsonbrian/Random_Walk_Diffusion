@@ -37,7 +37,7 @@ now0 = datetime.datetime.now()                      # Time at start of sim
 for i in range(0,N_Frames):
     Z = 0 * Y                                       # Allocate next prtcl prfl
     # Print out progress at the desgnated intervals
-    if(i!=0 and i%(N_Frames/NN)):
+    if(i!=0 and i%(N_Frames/NN)==0):
         now1 = datetime.datetime.now()
         print("{} out of {} frames; elapsed minutes = {:2f}".format(i\
          ,N_Frames,60*(now1.hour-now0.hour)+(now1.minute-now0.minute)+\
